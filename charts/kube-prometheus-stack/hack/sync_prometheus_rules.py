@@ -89,9 +89,9 @@ condition_map = {
     'kubernetes-system-kubelet': ' .Values.defaultRules.rules.kubernetesSystem', # kubernetes-system was split into more groups in 1.14, one of them is kubernetes-system-kubelet
     'kubernetes-system-controller-manager': ' .Values.kubeControllerManager.enabled',
     'kubernetes-system-scheduler': ' .Values.kubeScheduler.enabled .Values.defaultRules.rules.kubeScheduler',
-    'node-exporter.rules': ' .Values.defaultRules.rules.node',
-    'node-exporter': ' .Values.defaultRules.rules.node',
-    'node.rules': ' .Values.defaultRules.rules.node',
+    'node-exporter.rules': ' (or .Values.defaultRules.rules.node .Values.defaultRules.rules.nodeAlerting)',
+    'node-exporter': ' (or .Values.defaultRules.rules.node .Values.defaultRules.rules.nodeRecording)',
+    'node.rules': ' (or .Values.defaultRules.rules.node .Values.defaultRules.rules.nodeRecording)',
     'node-network': ' .Values.defaultRules.rules.network',
     'node-time': ' .Values.defaultRules.rules.time',
     'prometheus-operator': ' .Values.defaultRules.rules.prometheusOperator',

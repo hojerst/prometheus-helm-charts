@@ -53,7 +53,9 @@ defaultRules:
     kubeScheduler: true
     kubeStateMetrics: true
     network: true
-    node: true
+    node: true # deprecated; enables both nodeRecording and nodeAlerting when true
+    nodeRecording: true
+    nodeAlerting: true
     prometheus: true
     prometheusOperator: true
     time: true
