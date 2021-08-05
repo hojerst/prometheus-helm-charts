@@ -133,7 +133,25 @@ replacement_map = {
     'https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#': {
         'replacement': '{{ .Values.defaultRules.runbookUrl }}',
         'init': ''},
-    'https://github.com/prometheus-operator/kube-prometheus/wiki/': {
+    'https://runbooks.prometheus-operator.dev/runbooks/kubernetes/': {
+        'replacement': '{{ .Values.defaultRules.runbookUrl }}alert-name-',
+        'init': ''},
+    'https://runbooks.prometheus-operator.dev/runbooks/prometheus/': {
+        'replacement': '{{ .Values.defaultRules.runbookUrl }}alert-name-',
+        'init': ''},
+    'https://runbooks.prometheus-operator.dev/runbooks/alertmanager/': {
+        'replacement': '{{ .Values.defaultRules.runbookUrl }}alert-name-',
+        'init': ''},
+    'https://runbooks.prometheus-operator.dev/runbooks/general/': {
+        'replacement': '{{ .Values.defaultRules.runbookUrl }}alert-name-',
+        'init': ''},
+    'https://runbooks.prometheus-operator.dev/runbooks/node/': {
+        'replacement': '{{ .Values.defaultRules.runbookUrl }}alert-name-',
+        'init': ''},
+    'https://runbooks.prometheus-operator.dev/runbooks/prometheus-operator/': {
+        'replacement': '{{ .Values.defaultRules.runbookUrl }}alert-name-',
+        'init': ''},
+    'https://runbooks.prometheus-operator.dev/runbooks/kube-state-metrics/': {
         'replacement': '{{ .Values.defaultRules.runbookUrl }}alert-name-',
         'init': ''},
     'job="kube-state-metrics"': {
